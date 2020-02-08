@@ -1,0 +1,19 @@
+function insertionSort(array) {
+
+    for (let i = 1; i < array.length; i++) {
+
+        let j = i;
+        while (j > 0 && array[j] < array[j-1]) {
+            const temp = array[j];
+            array[j] = array[j-1];
+            array[j-1] = temp;
+
+            j--;
+        }
+    }
+
+    return array
+}
+
+
+insertionSort([2,4,6,2,35,7,34,784,23,5,7]);
