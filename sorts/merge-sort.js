@@ -1,7 +1,5 @@
 
 function merge (array1, array2) {
-    const count = Math.min(array1.length, array2.length);
-
     let cursor1 = 0;
     let cursor2 = 0
 
@@ -12,14 +10,11 @@ function merge (array1, array2) {
 
         if (array1.length === cursor1) {
             finalArray = [...finalArray, ...array2.slice(cursor2, array2.length)]
-            finished = true;
             break;
         } else if (array2.length === cursor2) {
             finalArray = [...finalArray, ...array1.slice(cursor1, array1.length)]
-            finished = true;
             break;
         }
-
 
 
         if  (array1[cursor1] < array2[cursor2]) {
